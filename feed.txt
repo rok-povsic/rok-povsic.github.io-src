@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Rok Povšič</title>
+	<atom:link href="http://rok.povsic.com/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rok.povsic.com</link>
+	<description>The zen, art and science of software development</description>
+	<lastBuildDate>Fri, 12 Feb 2016 21:13:29 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.5</generator>
+	<item>
+		<title>How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host</title>
+		<link>http://rok.povsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-8-1-host/</link>
+		<comments>http://rok.povsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-8-1-host/#respond</comments>
+		<pubDate>Fri, 12 Feb 2016 21:02:38 +0000</pubDate>
+		<dc:creator><![CDATA[Rok Povšič]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://rok.povsic.com/?p=32</guid>
+		<description><![CDATA[There&#8217;s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it&#8217;s position by some offset. See the GIF below. How to fix it? Locate VMWare Workstation, right click and open [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>There&#8217;s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it&#8217;s position by some offset. See the GIF below.</p>
+<p><a href="http://rok.povsic.com/wp-content/uploads/2016/02/vmware_bug.gif"><img class="alignnone wp-image-33 size-full" src="http://rok.povsic.com/wp-content/uploads/2016/02/vmware_bug.gif" alt="vmware_bug" width="504" height="308" /></a></p>
+<p>How to fix it?</p>
+<ol>
+<li>Locate VMWare Workstation, right click and open <strong>Properties</strong>.</li>
+<li>Under <strong>Compatibility</strong> check <em>Disable display scaling on high DPI settings</em>.</li>
+<li>Restart VMWare Workstation.</li>
+</ol>
+<p>The mouse should now behave normally.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://rok.povsic.com/how-to-fix-mouse-offset-bug-in-vmware-workstation-under-windows-8-1-host/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>[C#] Why it&#8217;s better to have short-lived DataContext</title>
+		<link>http://rok.povsic.com/better-short-lived-data-context/</link>
+		<comments>http://rok.povsic.com/better-short-lived-data-context/#respond</comments>
+		<pubDate>Wed, 20 Aug 2014 21:13:41 +0000</pubDate>
+		<dc:creator><![CDATA[Rok Povšič]]></dc:creator>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[Dependency Injection]]></category>
+		<category><![CDATA[c#]]></category>
+		<category><![CDATA[data context]]></category>
+		<category><![CDATA[dependency injection]]></category>
+
+		<guid isPermaLink="false">http://rok.povsic.com/?p=7</guid>
+		<description><![CDATA[When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data. If the project is not too large, you [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.</p>
+<p>If the project is not too large, you could have all your dealings with database abstracted in one class. That puts all your database logic in one place. You also can easily mock this class (as opposed to mocking DataContext). Let&#8217;s call this DatabaseOperations.</p>
+<p>When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind. </p>
+<p>In one, you could have your constructor as a class field and initialize it in the constructor. Each function that deals with the database would then use the same instance of the context. Sample code: </p>
+<p></p><pre class="crayon-plain-tag">public class DatabaseOperations : IDatabaseOperations
+{
+    private readonly MyDatabaseDataContext _context;
+
+    public DatabaseOperations(MyDatabaseDataContext context)
+    {
+        _context = context;
+    }
+
+    public List&lt;User&gt; GetUsers()
+    {
+        // Retrieve users by using _context.
+    }
+
+    public List&lt;Role&gt; GetRoles()
+    {
+        // Retrieve roles by using _context.
+    }
+
+    public List&lt;Group&gt; GetGroups()
+    {
+        // Retrieve groups by using _context.
+    }
+}</pre><p></p>
+<p>Another way would be without the context instance as a field. Here each method creates and closes its own context. Sample code:</p>
+<p></p><pre class="crayon-plain-tag">public class DatabaseOperations : IDatabaseOperations
+{
+    private readonly string _connectionString = "myConnStr";
+
+    public List&lt;User&gt; GetUsers()
+    {
+        using (var context = new MyDatabaseDataContext(_connectionString))
+        {
+            // Retrieve users by using context.
+        }
+    }
+
+    public List&lt;Role&gt; GetRoles()
+    {
+        using (var context = new MyDatabaseDataContext(_connectionString))
+        {
+            // Retrieve roles by using context.
+        }
+    }
+
+    public List&lt;Group&gt; GetGroups()
+    {
+        using (var context = new MyDatabaseDataContext(_connectionString))
+        {
+            // Retrieve groups by using context.
+        }
+    }
+}</pre><p></p>
+<p>At first, the second approach may seem to be more wasteful as each function has to create the context. That creates some amount of duplicated code. However, there are two reasons why this second approach is preferred. </p>
+<p>The first reason is that in the first example the instance of a class DatabaseOperations can live a long time. You probably do not create new instance of the class each time you call function inside. Long lived DatabaseOperations instance means also that the injected DataContext lives long time. The DataContext, however, is supposed to be used on only small units of work. The reason is that in the first example, one instance of DataContext has to track the changes that happen in returned objects. </p>
+<p>More info in the <a href="http://msdn.microsoft.com/en-us/library/system.data.linq.datacontext(v=vs.110).aspx" title="official documentation" target="_blank">official documentation</a>:</p>
+<blockquote><p>In general, a DataContext instance is designed to last for one &#8220;unit of work&#8221; however your application defines that term. A DataContext is lightweight and is not expensive to create. A typical LINQ to SQL application creates DataContext instances at method scope or as a member of short-lived classes that represent a logical set of related database operations.</p></blockquote>
+<p>The second reason, which is important from the design point of view, is that in first example, DataContext has to be passed in via constructor. However, the DatabaseOperations class behaves like a Service Object and in order to use dependency injection, Service Objects should take as constructor parameters only other Service Objects. DataContext is more of a Value Object which does not belong in the parameter list. The tree of Service Objects cannot be created at the start of the program.</p>
+<p>For more info see <a href="http://misko.hevery.com/2008/09/30/to-new-or-not-to-new/" title="blog article" target="_blank">this blog article</a> by Miško Hevery (who is the author of JavaScript framework AngularJS). </p>
+<p>You could, of course, also have DataContext as a parameter in every function. That would allow your class to be a Service Object which has no Value Objects in the constructor parameter list. However, the first reason would still be violated if that DataContext is long-lived or, as the documentation says, used for more than one “unit of work”. </p>
+<p>In order to somehow mitigate the duplication of code by creating a new DataContext in every method, you might be able to use the trick from <a href="http://stackoverflow.com/a/23367569/365837" title="StackOverflow answer" target="_blank">this StackOverflow answer</a>. </p>
+<p>That might or might not be useful for you, depending on where you store and how you obtain the connection string. For example, if you have it stored as a static class field, then it is appropriate. If you have to get the connection string from a file or another database, then it might get a bit complicated (in my last project, I decided against it and just used the simple approach shown in the second example).</p>
+]]></content:encoded>
+			<wfw:commentRss>http://rok.povsic.com/better-short-lived-data-context/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
