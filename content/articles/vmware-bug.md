@@ -1,7 +1,7 @@
 Title: How to fix mouse offset bug in VMWare Workstation under Windows 8.1 host
 Date: 2016-02-12 18:44
 Category: vmware
-Tags: c#, datacontext
+Tags: vmware, bug
 Authors: Rok Povšič
 
 There’s a bug in mouse behavior that happened to me in VMWare Workstation under Windows 8.1 host with Ubuntu 14.04 as client. When hovering mouse over something and/or selecting something by dragging, the mouse moved it’s position by some offset. See the GIF below.

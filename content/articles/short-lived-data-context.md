@@ -5,10 +5,12 @@ Tags: c#, datacontext
 Authors: Rok Povšič
 
 
-This is the content of my super blog post.
-rk with SQL databases in your C# application, one way is to use LINQ to SQL framework. The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.
+When you work with SQL databases in your C# application, one way is to use LINQ to SQL framework. 
+The way to use LINQ to SQL is to create an instance of DataContext for your specific database and use it to retrieve, insert, update and delete data.
 
-If the project is not too large, you could have all your dealings with database abstracted in one class. That puts all your database logic in one place. You also can easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.
+If the project is not too large, you could have all your dealings with database abstracted 
+in one class. That puts all your database logic in one place. You also can 
+easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.
 
 When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.
 

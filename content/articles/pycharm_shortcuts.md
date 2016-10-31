@@ -1,4 +1,5 @@
 Title: Using PyCharm without a mouse
+Date: 2016-10-29 16:30
 Category: pycharm
 Tags: pycharm, shortcuts
 Authors: Rok Povšič
