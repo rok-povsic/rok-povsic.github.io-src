@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <!--<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>-->
 
   {% if USE_LESS %}
     <link rel="stylesheet/less" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stylesheet/style.less">
@@ -12,6 +12,12 @@
 
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments/{{ PYGMENTS_STYLE|default('github') }}.min.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/font-awesome.min.css">
+
+  <!--<style>-->
+    <!--body {-->
+      <!--font-family: 'Arima Madurai', sans-serif;-->
+    <!--}-->
+  <!--</style>-->
 
   {% if CUSTOM_CSS %}
     <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
@@ -88,11 +94,11 @@
       </ul>
 
       <h3>RECENT POSTS</h3>
-      {% set recent = articles if not all_articles else all_articles %}
-      {% for a in recent %}
+      {% set recent_articles = articles if not all_articles else all_articles %}
+      {% for recent_article in recent_articles %}
         {% if loop.index <= 6 %}
           <p>
-            <a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a>
+            <a href="{{ SITEURL }}/{{ recent_article.url }}#{{ recent_article.slug }}">{{ recent_article.title }}</a>
           </p>
         {% endif %}
       {% endfor %}
@@ -102,8 +108,11 @@
     {% if MAIN_MENU %}
     <nav>
       <a href="{{ SITEURL }}">Home</a>
-      {% for title, link in MENUITEMS %}
-      <a href="{{ link }}">{{ title }}</a>
+      <!--{% for title, link in MENUITEMS %}-->
+      <!--<a href="{{ link }}">{{ title }}</a>-->
+      <!--{% endfor %}-->
+      {% for page in pages|sort(attribute='title') %}
+      <a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a>
       {% endfor %}
       {% if FEED_ALL_ATOM %}
       <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>

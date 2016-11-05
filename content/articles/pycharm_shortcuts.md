@@ -35,7 +35,7 @@ When refactoring, PyCharm sometimes requires a confirmation of the refactoring (
 ## Toggle full screen
 You can add your own shortcut to toggle full screen if you go to Settings -> Keymap (shorcut to doing that is pressing **CTRL + ALT + S** and typing **Keymap**) since there is no default shortcut.
 
-But you can still do it with your keyboard pretty fast by pressing **ALT + V** to open the View menu and pressing **down arrow** and **Enter**.
+But you can still do it with your keyboard pretty fast by pressing **ALT + V** to open the View menu and pressing **up arrow** and **Enter**.
 
 I got used to that even though it's not the completely fastest way although it's pretty fast.
 

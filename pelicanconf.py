@@ -21,8 +21,8 @@ AUTHOR_FEED_RSS = None
 
 MAIN_MENU = True
 MENUITEMS = [
-    ('About', '/about'),
-    ('Contact', '/contact'),
+    ('About', '/pages/about-me'),
+    ('Contact', '/pages/contact'),
 ]
 
 # Blogroll
