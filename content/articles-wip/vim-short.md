@@ -1,12 +1,28 @@
-Title: A short guide for beginner VIM users
+Title: A short guide for new VIM users
 Date: 2016-11-29 16:30
 Category: vim
 Tags: vim
 Authors: Rok Povšič
 
-VIM is a text editor that makes writing code MUCH more enjoyable. Once you learn it you can't believe how people can code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is *almost* like watching your mother type two sentences using two fingers which takes 5 minutes. You just want to say: give me the keyboard, I'll do it for you. The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and might even know how to cleverly use HOME, END, PGUP and PGDOWN keys. But compared to VIM it's just sad.
+VIM is a text editor that makes writing code MUCH more enjoyable. Once you learn it you can't believe how people can code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is *almost* like watching your mother type two sentences using two fingers which takes 5 minutes. You just want to say: give me the keyboard, I'll do it for you. The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and might even know how to cleverly use HOME, END, PGUP and PGDOWN keys. But compared to VIM it's just too slow and awkward.
 
-The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favourite editor (which exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality.
+The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor.
 
+## Modes
+When writing code (or some other text) in a regular editor the key you press will appear on screen right away. Using VIM this will happen only if you are in so called *insert* mode. When in this mode, VIM behaves as any other editor. When starting VIM, it is in *normal* mode. To enter *insert* mode, simply press **i**. Now you can type anything you want. To exit *insert* mode and go back to *normal* mode, press **ESC**.
 
+## Moving around
+So why would is this *normal* mode even needed if we use keyboard to type characters on the screen and the only way we can do that is by being in the *insert* mode. Well, VIM makes the keyboard much more versatile tool. For example, when in *normal* mode, you can use keys **H**, **J**, **K** and **L** in order to move LEFT, DOWN, UP and RIGHT, respectively. That's very useful since it removes the need to always move your hand to the arrow keys. It takes some time to get used to but once you know it, it's hard to go back. When the hands are in the typing position (left index finger on **F** and right index finger on **J**) it's much more convenient to simply press **ESC** (which I even virtually switched with **CAPS LOCK** to have it closer to the standard position) and use **H**, **J**, **K** and **L**.
 
+Moving to the start of the next word is done by pressing **W** and moving to the start of previous word by pressing **B**. It's similar to pressing **CTRL + LEFT/RIGHT** when using regular editor, without the need to move right hand away from natural position and pressing two keys at the same time.
+
+Another thing I use a lot is pressing **{** and **}** which will jump the cursor to previous and to next paragraph (in **normal** mode of course).
+
+I think that this alone is worth using VIM when writing code or anything else. The best way 
+
+## Copying, deleting and pasting lines
+When writing code it's common to copy a line and paste it somewhere else. Copying a line is done by pressing **YY** (i.e. pressing **Y** twice). After that you can move anywhere else and with pressing **P** the line will be pasted under the line your cursor is on.
+
+Deleting a line is done by pressing **DD**. We can imagine it's similar to cutting a line as you can still paste it using **P**.
+
+##
