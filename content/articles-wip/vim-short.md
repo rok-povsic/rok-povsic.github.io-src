@@ -16,13 +16,26 @@ So why would is this *normal* mode even needed if we use keyboard to type charac
 
 Moving to the start of the next word is done by pressing **W** and moving to the start of previous word by pressing **B**. It's similar to pressing **CTRL + LEFT/RIGHT** when using regular editor, without the need to move right hand away from natural position and pressing two keys at the same time.
 
-Another thing I use a lot is pressing **{** and **}** which will jump the cursor to previous and to next paragraph (in **normal** mode of course).
+Another thing I use a lot is pressing **{** and **}** which will jump the cursor to previous and to next paragraph (in **normal** mode of course) and pressing **0** and **$$** which move the cursor to the beginning or end of the line you are currently on.
 
-I think that this alone is worth using VIM when writing code or anything else. The best way 
+I think that this alone is worth using VIM when writing code or anything else.
 
 ## Copying, deleting and pasting lines
 When writing code it's common to copy a line and paste it somewhere else. Copying a line is done by pressing **YY** (i.e. pressing **Y** twice). After that you can move anywhere else and with pressing **P** the line will be pasted under the line your cursor is on.
 
 Deleting a line is done by pressing **DD**. We can imagine it's similar to cutting a line as you can still paste it using **P**.
 
-##
+## Undo / Redo
+Undoing the last command (i.e. inserting, deleting, pasting, etc.) is done by pressing **U**. The redo command is **CTRL + R**.
+
+## Selecting lines
+Another very useful command is **SHIFT + V** which starts to select lines. After moving up or down (preferably with **K** or **J**) you press **Y** to copy them. Now you can move to some other place and press **P** to paste copied lines (use **D** instead of **Y** to delete them).
+
+## Saving positions and jumping
+At any place you can type **M** and any
+
+## Searching
+
+## Replacing
+
+## Repeating commands
