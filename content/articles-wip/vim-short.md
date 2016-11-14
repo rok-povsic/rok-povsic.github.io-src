@@ -32,10 +32,16 @@ Undoing the last command (i.e. inserting, deleting, pasting, etc.) is done by pr
 Another very useful command is **SHIFT + V** which starts to select lines. After moving up or down (preferably with **K** or **J**) you press **Y** to copy them. Now you can move to some other place and press **P** to paste copied lines (use **D** instead of **Y** to delete them).
 
 ## Saving positions and jumping
-At any place you can type **M** and any
+Wherever your cursor is located you can press **M** followed by any character an the position will be saved. After that you can press **'** followed by the character you used previously and your cursor will jump to saved position. Very useful!
 
 ## Searching
+Searching is done by simply pressing **/**, typing the word to search for and pressing **ENTER**. The cursor is moved to the first found word. After that, pressing **N** will jump to the next found word (and **SHIFT + N** will jump to the previous found word).
 
 ## Replacing
 
 ## Repeating commands
+
+## Other small things
+
+## How to learn all this?
+There's no need to learn everything to start using vim. I think VIM has major advantages even when you use only a small subset of it. Simply start by installing a VIM plugin for your code editor and using mostly *insert* mode and maybe **H**, **J**, **K** and **L** (the keys to move in different directions, remember?) in the *normal* mode here and there
