@@ -6,7 +6,7 @@ Authors: Rok Povšič
 
 VIM is a text editor that makes writing code MUCH more enjoyable. Once you learn it you can't believe how people can code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is *almost* like watching your mother type two sentences using two fingers which takes 5 minutes. You just want to say: give me the keyboard, I'll do it for you. The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and might even know how to cleverly use HOME, END, PGUP and PGDOWN keys. But compared to VIM it's just too slow and awkward.
 
-The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor.
+The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor. What's great here is that using VIM gives you a consistency across all the editors. You don't need to remember as much specific stuff for each editor (i.e. what's the shortcut for Redo in this IDE, again?) - VIM is the same in all of them.
 
 ## Modes
 When writing code (or some other text) in a regular editor the key you press will appear on screen right away. Using VIM this will happen only if you are in so called *insert* mode. When in this mode, VIM behaves as any other editor. When starting VIM, it is in *normal* mode. To enter *insert* mode, simply press **i**. Now you can type anything you want. To exit *insert* mode and go back to *normal* mode, press **ESC**.
@@ -35,13 +35,29 @@ Another very useful command is **SHIFT + V** which starts to select lines. After
 Wherever your cursor is located you can press **M** followed by any character an the position will be saved. After that you can press **'** followed by the character you used previously and your cursor will jump to saved position. Very useful!
 
 ## Searching
-Searching is done by simply pressing **/**, typing the word to search for and pressing **ENTER**. The cursor is moved to the first found word. After that, pressing **N** will jump to the next found word (and **SHIFT + N** will jump to the previous found word).
+Searching is done by simply pressing **/**, typing the word to search for and pressing **ENTER**. The cursor is moved to the first found word. After that, pressing **N** will move the cursor to the next found word (and **SHIFT + N** will move it to the previous found word).
 
 ## Replacing
-
-## Repeating commands
+Often you need to replace all words with some other words in a given text. First, you select the text (by using **SHIFT + V**, remember?) and then typing this (without the < and >): **:s/<text to search>/<text to replace it with>/g**. It might sound complex but once you get used to it it's so much faster and easier than using the default Find & Replace functionality of whatever IDE you are using at this moment.
 
 ## Other small things
+Pressing **SHIFT + I** will open *insert* mode in the beginning of the row and **SHIFT + A** will open *insert* mode at the end of the row.
+
+## Repeating commands machine
+Repeating commands is where VIM really shows its power. Whatever command you've seen so far, you can save its execution sequence and repeat it. This is huge! First you record a command or a sequence of commands by first pressing **Q<some key, say A>**, executing the commands, and then pressing **Q** to end the execution and save it. Then you can replay it by pressing **<number of times to repeat>@a**.
+
+Let's look at an example. Say I have these lines in my editor and I want to add parenthesis around them, with a comma on the right and a tab on the left.
+
+Marlon Brando
+Al Pacino
+James Caan
+Richard S. Castellano
+Robert Duvall
+Sterling Hayden
+
+I could do it by hand or I could utilize the great power of VIM and do it singlehandedly, wizard-style. I'll do it by first moving to the first line and pressing **QA** - that will start recording my commands under the key A. Then I do **SHIFT + I** to move to the beginning of the line and open *normal* mode, followed by pressing TAB and ". Then I press **ESC** to exit *insert* mode and return to *normal* mode and do **SHIFT + A** to open *insert* mode at the end of the line. Next, I press " and ,. I exit *insert* mode again and press **J** to move one line down. My execution sequence is finished so I complete it by pressing **Q**.
+
+Now VIM has remember the whole execution and will execute it any number of times. I simply do **5@A** and the execution will be repeated 5 times, fixing all my lines.
 
 ## How to learn all this?
 There's no need to learn everything to start using vim. I think VIM has major advantages even when you use only a small subset of it. Simply start by installing a VIM plugin for your code editor and using mostly *insert* mode and maybe **H**, **J**, **K** and **L** (the keys to move in different directions, remember?) in the *normal* mode here and there
