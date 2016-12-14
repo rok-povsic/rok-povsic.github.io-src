@@ -4,7 +4,7 @@ Category: vim
 Tags: vim
 Authors: Rok Povšič
 
-VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is *almost* like someone type using two fingers (one with each hand) which takes a minute per sentence. You just want to say: give me the keyboard, I'll do it for you. The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and is most likely very efficient and clever with the use of HOME, END, PGUP and PGDOWN keys. But compared to VIM it's all slow and awkward.
+VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is *almost* like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you. The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and is most likely very efficient and clever with the use of HOME, END, PGUP and PGDOWN keys. But compared to VIM it's all slow and awkward.
 
 The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor. What's great here is that using VIM gives you a consistency across all the editors. You don't need to remember as much specific stuff for each editor (i.e. what's the shortcut for Redo in this IDE, again?) - VIM is the same in all of them.
 
@@ -52,7 +52,7 @@ Searching is done by simply pressing **/**, typing the word to search for and pr
 ![]({filename}/images/vim_short/searching.gif)
 
 ## Replacing
-Often you need to replace all words with some other words in a given text. First, you select the text (by using **SHIFT + V**, remember?) and then typing this (without the < and >): **:s/<text to search>/<text to replace it with>/g**. It might sound complex but once you get used to it it's so much faster and easier than using the default Find & Replace functionality of whatever IDE you are using at this moment.
+Often you need to replace all words with some other words in a given text. First, you select the text (by using **SHIFT + V**, remember?) and then typing this (without the < and >): **:s/&lt;text to search>/&lt;text to replace it with>/g**. It might sound complex but once you get used to it it's so much faster and easier than using the default Find & Replace functionality of whatever IDE you are using at this moment.
 
 ![]({filename}/images/vim_short/replacing.gif)
 
@@ -62,7 +62,7 @@ Pressing **SHIFT + I** will open *insert* mode in the beginning of the row and *
 ![]({filename}/images/vim_short/other.gif)
 
 ## Repeating commands machine
-Repeating commands is where VIM really shows its power. Whatever command you've seen so far, you can save its execution sequence and repeat it. This is huge! First you record a command or a sequence of commands by first pressing **Q<some key, say A>**, executing the commands, and then pressing **Q** to end the execution and save it. Then you can replay it by pressing **<number of times to repeat>@a**.
+Repeating commands is where VIM really shows its power. Whatever command you've seen so far, you can save its execution sequence and repeat it. This is huge! First you record a command or a sequence of commands by first pressing **Q&lt;some key, say A>**, executing the commands, and then pressing **Q** to end the execution and save it. Then you can replay it by pressing **&lt;number of times to repeat>@a**.
 
 Let's look at an example. Say I have these lines in my editor and I want to add parenthesis around them, with a comma on the right and a tab on the left.
 
