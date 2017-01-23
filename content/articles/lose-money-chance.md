@@ -1,5 +1,5 @@
 Title: What is the chance of losing money at the stock market?
-Date: 2016-12-10 8:30
+Date: 2017-01-23 23:45
 Category: finance
 Tags: investing, savings, money
 Authors: Rok Povšič
