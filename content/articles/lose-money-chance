@@ -28,4 +28,6 @@ Let's look at the data.
 
 How about investing in gold? Below is the chance of losing money in gold, when invested for X years.
 
+I have gold price data only from 1968 onwards so the maximum displayed number of years in position is 20.
+
 ![Gold chance of losing money]({filename}/images/lose_money_chance/gold_losing_chance.png)
