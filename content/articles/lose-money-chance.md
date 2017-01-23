@@ -10,12 +10,13 @@ in the portfolio, the chance of losing money is greater because if any single co
 the effect on the portfolio will be large.
 
 But say you invest in a large number of companies, say in the companies of some stock index.
-Well, we still don't know how those companies will perform in the future.
-What we can do is we can look at how the one of the stock market indexes performed in the past.
+We cannot be certain of any performance of the selected companies in the future.
+What we can do is we can look at how the stock market index performed in the past.
 
+To do this, I wanted to have as large amount of data as possible.
 The most data I could find, is for a stock index
 [DJIA](https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average).
-The index consists of 30 large companies from the United States and I have data July 1896 onwards.
+The index consists of 30 large companies from the United States and I have data from July 1896 onwards.
 It is a good-enough heuristics of how the stock market moves.
 
 Let's say you invested your money into the 30 companies of the DJIA index at some random point after year 1896. What's the chance your return
