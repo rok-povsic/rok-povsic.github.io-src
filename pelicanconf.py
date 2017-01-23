@@ -42,7 +42,7 @@ DEFAULT_PAGINATION = 10
 
 THEME = 'themes/flex'
 LOAD_CONTENT_CACHE = False
-ARTICLE_EXCLUDES = ['articles_wip', ]
+IGNORE_FILES = ['articles-wip', ]
 
 SUMMARY_MAX_LENGTH = 0
 PYGMENTS_STYLE = 'monokai'
