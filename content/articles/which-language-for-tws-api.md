@@ -69,4 +69,4 @@ than when using one of the more strict programming languages.
 I'd choose C# when using Windows and Java when using other platforms.
 
 In the end, you want to choose the programming language you know best, or one you want to learn.
-If you know all equally well or know none, I'd recommend what I've written above - probably Python, or C#/Java with large projects.
+If you know all equally well or know none, I'd recommend what I've written above - probably Python, or C#/Java for large projects.
