@@ -44,9 +44,9 @@ After this, the next step is to configure how exactly the build should be perfor
         stage: build
         script:
                 - C:\Tools\nuget.exe restore
-                - cmd.exe /C " "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Configuration=Release /t:Clean;Build ForexMaster.sln " && exit %%ERRORLEVEL%%
+                - cmd.exe /C " "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Configuration=Release /t:Clean;Build YourSolutionName.sln " && exit %%ERRORLEVEL%%
 
-You have to specify the location of `nuget.exe` and `MSBuild.exe`. You may download the first from [here](http://dist.nuget.org/). See [this StackOverflow page](https://stackoverflow.com/questions/42696948/how-can-i-install-the-vs2017-version-of-msbuild-on-a-build-server-without-instal) to find out how to get the second one.
+You have to specify your location of `nuget.exe` and `MSBuild.exe`, and the solution name. You may download `nuget.exe` from [here](http://dist.nuget.org/). See [this StackOverflow page](https://stackoverflow.com/questions/42696948/how-can-i-install-the-vs2017-version-of-msbuild-on-a-build-server-without-instal) to find out how to get `MSBuild.exe`.
 
 After that, every time a code is pushed on the repository, it will be automatically downloaded to the Windows machine that is running GitLab Runner. The build status will be reported under *Pipelines*.
 
