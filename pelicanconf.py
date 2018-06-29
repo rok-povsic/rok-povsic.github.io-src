@@ -11,6 +11,7 @@ PATH = 'content'
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = u'en'
+LOCALE = ('en_US',)
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
