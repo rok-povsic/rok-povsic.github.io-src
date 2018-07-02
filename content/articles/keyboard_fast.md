@@ -17,4 +17,10 @@ Since I press Esc much more than Caps Lock, I switched the two keys (functionall
 
 I also considered switching Backspace with some other key but haven't so far found a good replacement. I thought about Right Shift, which I don't use a lot, but it's not that of a good improvement. 
 
+## Shorter delay when holding a key
+When programming you often have to hold down a certain key - one of the arrow keys, backspace, or, if you use VIM, one of the keys h, j, k, l, w, b, etc. I've found out that, for me, the delay between the appearance of the first character and the following is too great. I've reduced the delay to 250ms and typing seems much more responsive and enjoyable. At this speed it's still quite rare for me to produce a duplicated key when I don't intend to do one.
 
+In Linux, the delay is set by adding the following line to `.bashrc`:
+```python
+xset r rate 250
+```
