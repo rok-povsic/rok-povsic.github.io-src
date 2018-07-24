@@ -7,10 +7,11 @@
 ### Build & publish
 Build the output HTML:
 
-    pelican content/ -o output/ -s pelicanconf.py
+    make html
 
-Run dev server:
+Run the dev server:
 
-    cd output && python -m pelican.server 8080
+    make devserver
+    make stopserver
 
 Publish by committing & pushing.
