@@ -31,7 +31,7 @@ MENUITEMS = [
 
 # Social widget
 SOCIAL = (
-    ('stackoverflow', 'http://stackoverflow.com/users/365837/yper'),
+    ('stack-overflow', 'http://stackoverflow.com/users/365837/yper'),
     ('github', 'https://github.com/rok-povsic'),
     ('linkedin', 'https://www.linkedin.com/in/rokpovsic'),
     ('rss', 'feeds/all.atom.xml'),
