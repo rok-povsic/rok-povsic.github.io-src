@@ -9,9 +9,9 @@ Build the output HTML:
 
     make html
 
-Run the dev server:
+Run the dev server, runs at http://localhost:8000/ :
 
-    make devserver
-    make stopserver
+    sudo make devserver
+    sudo make stopserver
 
-Publish by committing & pushing.
+Publish by committing & pushing inside of output/. Also commit & push source code in /.
