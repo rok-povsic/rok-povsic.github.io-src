@@ -11,7 +11,7 @@ PATH = 'content'
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = u'en'
-LOCALE = ('en_US',)
+LOCALE = ('en_US.UTF-8',)
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -22,8 +22,7 @@ AUTHOR_FEED_RSS = None
 
 MAIN_MENU = True
 MENUITEMS = [
-    ('About', '/pages/about-me'),
-    ('Contact', '/pages/contact'),
+    ('All posts', '/archives'),
 ]
 
 # Blogroll
