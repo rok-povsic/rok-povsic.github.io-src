@@ -83,7 +83,7 @@
           <li><a href="{{ SITEURL }}{{ link }}">{{ title }}</a></li>
           {% endfor %}
           {% for page in pages|sort(attribute='title') %}
-          <li><a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a></li>
+          <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
           {% endfor %}
           {% for name, link in LINKS %}
           <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
@@ -102,7 +102,7 @@
       {% for recent_article in recent_articles %}
         {% if loop.index <= 6 %}
           <p>
-            <a href="{{ SITEURL }}/{{ recent_article.url }}#{{ recent_article.slug }}">{{ recent_article.title }}</a>
+            <a href="{{ SITEURL }}/{{ recent_article.url }}">{{ recent_article.title }}</a>
           </p>
         {% endif %}
       {% endfor %}
@@ -116,7 +116,7 @@
       <a href="{{ link }}">{{ title }}</a>
       {% endfor %}
       {% for page in pages|sort(attribute='title') %}
-      <a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a>
+      <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
       {% endfor %}
       {% if FEED_ALL_ATOM %}
       <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
