@@ -62,11 +62,9 @@ It runs on Windows, Linux, and Mac.
 In most cases, probably 80%+, I'd recommend Python, especially once it comes out of Beta. Smaller and middle-sized trading programs will benefit the most from
 the easiness-of-use that comes with Python.
 
-But I would not recommend Python when the project is going to be larger. I'd say that is more than around 10,000 lines of code.
-With the increased size the lack of static types can hurt the ability to write robust code.
-It's easier to introduce bugs. After a certain project size, it just takes longer to read/write Python code
-than when using one of the more strict programming languages.
-I'd choose C# when using Windows and Java when using other platforms.
+<del>But I would not recommend Python when the project is going to be larger. I'd say that is more than around 10,000 lines of code. With the increased size the lack of static types can hurt the ability to write robust code. It's easier to introduce bugs. After a certain project size, it just takes longer to read/write Python code than when using one of the more strict programming languages. I'd choose C# when using Windows and Java when using other platforms.</del>
 
-In the end, you want to choose the programming language you know best, or one you want to learn.
-If you know all equally well or know none, I'd recommend what I've written above - probably Python, or C#/Java for large projects.
+*Edit: I wouldn't anymore insist of choosing C#/Java over Python. I've participated in large-scale financial Python projects where the Python's lack of static types did not increase the amount of subtle bugs. This was achieved by having a thorough set of unit and integration tests, by giving additional information to functions, arguments, fields and variables with the [typing module](https://docs.python.org/3/library/typing.html) of Python 3.5+, and by using static analysis tools such as pylint, flake8 and mypy. Using such good software engineering practices with Python gives you the flexibility of a dynamically-typed language while keeping a strong and robust code base.*
+
+In the end, you want to choose the programming language you or your team knows best.
+If you know all equally well, I'd recommend what I've written above - Python.
