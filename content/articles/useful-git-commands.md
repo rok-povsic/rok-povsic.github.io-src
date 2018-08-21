@@ -6,6 +6,8 @@ Authors: Rok Povšič
 
 Here's a list of Git commands that solve specific problems I encounter sometimes. I find these commands very useful, although I may not use them every day, which means I will tend to forget them and have to re-find them again and again. I'm storing them here for easy access. Maybe somebody's going to find them useful too.
 
+<!-- PELICAN_END_SUMMARY -->
+
 ## Remove all changes from staging (but keep the actual changes)
 ```python
 git reset HEAD -- .

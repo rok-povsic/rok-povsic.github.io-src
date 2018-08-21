@@ -15,6 +15,8 @@ But say you invest in a large number of companies, say in the companies of some 
 We cannot be certain of any performance of the selected companies in the future.
 What we can do is we can look at how the stock market index performed in the past.
 
+<!-- PELICAN_END_SUMMARY -->
+
 To do this, I wanted to have as large amount of data as possible.
 The most data I could find, is for a stock index
 [S&P 500](https://en.wikipedia.org/wiki/S%26P_500_Index).

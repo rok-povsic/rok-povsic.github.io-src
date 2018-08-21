@@ -6,6 +6,8 @@ Authors: Rok Povšič
 
 This is a guide on how to upgrade Postgres. The commands below will install a new Postgres 9.6 instance, migrate all the data, and afterwards uninstall the old Postgres 9.5 instance.
 
+<!-- PELICAN_END_SUMMARY -->
+
 > Note: I've used these exact commands on Ubuntu 16.04. Your mileage may vary on other OSes and Postgres versions.
 
 ### 1. Install the new version

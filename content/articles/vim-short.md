@@ -8,6 +8,8 @@ VIM is a text editor that makes writing code MUCH more enjoyable. After using it
 
 The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor. What's great here is that using VIM gives you a consistency across all the editors. You don't need to remember as much specific stuff for each editor (i.e. what's the shortcut for Redo in this IDE, again?) - VIM is the same in all of them.
 
+<!-- PELICAN_END_SUMMARY -->
+
 ## Modes
 When writing code (or some other text) in a regular editor the key, the keys you press appear on the screen right away. Using VIM this will happen only if you are in so called *insert* mode. When in this mode, VIM behaves as any other editor. After VIM has just started, it is in *normal* mode. If you simply want to write some text, press **i** to enter *insert* mode. Now you can type anything you want. To exit *insert* mode and go back to *normal* mode, press **ESC**.
 

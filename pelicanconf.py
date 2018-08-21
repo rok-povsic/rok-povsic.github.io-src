@@ -45,8 +45,10 @@ THEME = 'themes/flex'
 LOAD_CONTENT_CACHE = False
 IGNORE_FILES = ['articles-wip', ]
 
+SUMMARY_MAX_LENGTH = 50
 PYGMENTS_STYLE = 'monokai'
 
 GOOGLE_ANALYTICS = 'UA-41532619-2'
 
 PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['summary']

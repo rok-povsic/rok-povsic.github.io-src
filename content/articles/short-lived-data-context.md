@@ -12,6 +12,8 @@ If the project is not too large, you could have all your dealings with database 
 in one class. That puts all your database logic in one place. You also can 
 easily mock this class (as opposed to mocking DataContext). Let’s call this DatabaseOperations.
 
+<!-- PELICAN_END_SUMMARY -->
+
 When having a class which contains methods that do work the database, two ways of dealing with DataContext come to mind.
 
 ```csharp

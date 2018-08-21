@@ -11,6 +11,8 @@ Here, I describe the process of setting up [continuous integration (CI)](https:/
 
 Actually, GitLab even provides their CI servers for free, called Shared Runners, but at the time of this writing only Linux servers are available, so in this guide we are going to use our own Windows server to perform the actual builds and tests on. This means that to follow this guide, you **have to have a Windows instance available** in order to run a build. For a production use this is ideally a computer that runs 24/7, i.e. a computer on premises or a VPS, but can, for starters, also be your own laptop/pc.
 
+<!-- PELICAN_END_SUMMARY -->
+
 The continuous integration process we will do will be the following:
 
 1. You commit & push a set of code changes to a GitLab repository.

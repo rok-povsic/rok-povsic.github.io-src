@@ -6,6 +6,8 @@ Authors: Rok Povšič
 
 I've been always fan of minimizing mouse/touchpad usage when programming. There is a certain kind of satisfaction when you are able to do everything with the keyboard. You get the feeling of being agile, swift. It's a sign of mastery. There's no unnecessary movement and unnecessary time and muscle power spent. Watching another programmer use their keyboard solely and be fast doing it makes you respect them more. Watching them grab the mouse a lot and wait for them to find the mouse cursor is sometimes even a little painful.
 
+<!-- PELICAN_END_SUMMARY -->
+
 ## Run the program
 So how do you go about using keyboard more and using mouse less? Well, start off by learning how to run your program with only the keyboard.
 
