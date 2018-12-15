@@ -4,7 +4,11 @@ Category: continuous-integration, gitlab, .net
 Tags: continuous-integration, gitlab, .net
 Authors: Rok Povšič
 
-Here, I describe the process of setting up [continuous integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration) for a C# project that is hosted on [GitLab](https://gitlab.com). GitLab is a code sharing platform similar to GitHub but has two distinct advantages:
+Here, I describe the process of setting up continuous integration (CI) for a C# project that is hosted on GitLab.
+
+<!-- PELICAN_END_SUMMARY -->
+
+ [GitLab](https://gitlab.com) is a code sharing platform similar to GitHub but has two distinct advantages:
 
 - you can create private repositories for free,
 - it includes a free continuous integration tool called [GitLab CI](https://about.gitlab.com/gitlab-ci/) that can be run either on GitLab CI servers, or on your own server.

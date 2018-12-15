@@ -4,10 +4,11 @@ Category: typing
 Tags: typing, fast
 Authors: Rok Povšič
 
-## Using English keyboard layout
 Using any keyboard layout other than English may be less optimal for programming, at least that was my experience when compared to using Slovenian and German keyboard layouts to write code. Switching to the English layout made a great difference for me. It's simply faster to reach commonly used characters such as []{};:,@""<>= compared some (maybe all) other layouts. I've trained myself to always use English keyboard when programming and when writing in English language in general (such as now).  
 
 <!-- PELICAN_END_SUMMARY -->
+
+## Using English keyboard layout
 
 When writing in Slovenian language I switch the keyboard layout to Slovenian and continue seamlessly as nothing changed. Then only keys that I sometimes use wrong on Slovenian layout are letters Y and Z which are for some reason switched in Slovenian keyboard layout.
 

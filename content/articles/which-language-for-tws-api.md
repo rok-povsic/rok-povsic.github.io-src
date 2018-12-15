@@ -4,18 +4,14 @@ Category: finance
 Tags: investing, api, interactive brokers, tws
 Authors: Rok Povšič
 
-# TWS API
-
 Interactive Brokers has an API called [TWS API](https://interactivebrokers.github.io) which you can use to programmatically
 execute trades, poll current/historical market data, get account info, open positions, etc.
-Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python.
-
-All the TWS API functionality is supported in all of those programming languages. Which language should you choose for your
-trading program?
+Official bindings for several programming languages exist, namely: C#, Java, C++, VB, and Python. All the TWS API functionality 
+is supported in all of those programming languages. Which language should you choose for your trading program?
 
 <!-- PELICAN_END_SUMMARY -->
 
-### C#
+### C&#35;
 C# is a programming language made by Microsoft, although you can run it on Linux too. It's a statically-typed, which means all variable types
 are known at the compile time. That means your IDE, in this case probably Visual Studio, knows all the variable types and can help you
 a lot when writing code.

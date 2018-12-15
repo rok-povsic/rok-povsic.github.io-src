@@ -3,8 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Rok Povšič'
-SITENAME = u'Rok Povšič blog'
+SITENAME = u'Dev Log'
 SITEURL = 'https://rokpovsic.com'
+SITESUBTITLE = 'Tech blog by Rok Povšič'
 
 PATH = 'content'
 
@@ -35,18 +36,26 @@ SOCIAL = (
     ('linkedin', 'https://www.linkedin.com/in/rokpovsic'),
     ('rss', 'feeds/all.atom.xml'),
 )
+SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = True
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
-THEME = 'themes/flex'
+THEME = 'themes/pelican-clean-blog'
 LOAD_CONTENT_CACHE = False
 IGNORE_FILES = ['articles-wip', ]
 
-SUMMARY_MAX_LENGTH = 50
-PYGMENTS_STYLE = 'monokai'
+# PYGMENTS_STYLE = 'monokai'
 
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['summary']
+PLUGINS = ['summary', 'yuicompressor']
+
+HEADER_COLOR = '#1a4971'
+COLOR_SCHEME_CSS = 'monokai.css'
+
+from datetime import date
+CURRENT_YEAR = date.today().year
+
+DEFAULT_DATE_FORMAT = '%Y-%m-%d'

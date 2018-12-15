@@ -4,7 +4,11 @@ Category: vim
 Tags: vim
 Authors: Rok Povšič
 
-VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is *almost* like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you. The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and is most likely very efficient and clever with the use of HOME, END, PGUP and PGDOWN keys. But compared to VIM it's all slow and awkward.
+VIM is a text editor that makes writing code MUCH more enjoyable. After using it for a long time it's almost hard to believe how people can write code without it. It's like driving a new BMW opposed to an old Peugeot. Everything is just smooth and fast. And unlike BMW, it's free! Watching another programmer write code without using VIM is *almost* like watching someone type using two fingers (one with each hand). You just want to say: give me the keyboard, I'll do it for you.
+
+<!-- PELICAN_END_SUMMARY -->
+
+The programmer uses UP, DOWN, LEFT and RIGHT keys, reaches for the mouse a lot, repeats certain actions a lot and is most likely very efficient and clever with the use of HOME, END, PGUP and PGDOWN keys. But compared to VIM it's all slow and awkward.
 
 The best thing about VIM is that you don't even need to use the original program! You just install a VIM plugin for your favorite editor (such plugin exists for all major editors, including Visual Studio, all JetBrains editors, Atom, Sublime, ...) and you get all the functionality of the original VIM editor. What's great here is that using VIM gives you a consistency across all the editors. You don't need to remember as much specific stuff for each editor (i.e. what's the shortcut for Redo in this IDE, again?) - VIM is the same in all of them.
 

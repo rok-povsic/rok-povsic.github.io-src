@@ -7,6 +7,8 @@ Authors: Rok Povšič
 The first step of achieving good returns in the stock market is not losing money.
 What is the percentage chance of losing money in the stock market?
 
+<!-- PELICAN_END_SUMMARY -->
+
 That depends on the investment style and can be hard to quantify. If you hold a small number of companies
 in the portfolio, the chance of losing money is greater because if any single company performs badly,
 the effect on the portfolio will be large.
