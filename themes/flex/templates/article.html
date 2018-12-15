@@ -44,10 +44,15 @@
     </ul>
   </div>
   {% endif %}
-  {% include "partial/disqus.html" %}
+
+  <br />
+  <section id="isso-thread"></section>
 </article>
 {% endblock %}
 
 {% block additional_js %}
   {% include "partial/jsonld_article.html" %}
+
+  <script data-isso="https://comments.rokpovsic.com/"
+    src="https://comments.rokpovsic.com/js/embed.min.js"></script>
 {% endblock %}
