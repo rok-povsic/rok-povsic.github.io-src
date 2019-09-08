@@ -11,7 +11,7 @@ Build the output HTML:
 
 Run the dev server, runs at http://localhost:8000/ :
 
-    sudo make devserver
-    sudo make stopserver
+    make devserver
+    make stopserver
 
 Publish by committing & pushing inside of output/. Also commit & push source code in /.
