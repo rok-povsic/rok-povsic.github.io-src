@@ -97,7 +97,7 @@ The shortcuts I mostly use are:
 - `grbc` (`git rebase --continue`),
 - `gs` (`git status`).
 
-I've also set up auto-completion, so when typing `gco mas<TAB>`, `master` auto-completes. Here's what to put to `~/.bash_aliases` (or some other place from where your terminal loads custom code from) to set all this up: [Git Aliases]({filename}/pages/git-aliases.md)
+I've also set up auto-completion, so when typing `gco mas<TAB>`, `master` auto-completes. Here's what to put to `~/.bash_aliases` (or some other place from where your terminal loads custom code from) to set all this up: [Git Aliases](https://gist.github.com/rok-povsic/7272ef83462fc6720e1d40355a5e4d37)
 
 <video width="600" src="videos/efficiency-hacks/git-aliases.webm" controls preload="metadata"></video>
 
