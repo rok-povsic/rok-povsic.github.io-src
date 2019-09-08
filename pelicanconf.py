@@ -50,7 +50,8 @@ IGNORE_FILES = ['articles-wip', ]
 # PYGMENTS_STYLE = 'monokai'
 
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['summary', 'yuicompressor']
+PLUGINS = ['summary']
+# PLUGINS += ['yuicompressor']
 
 HEADER_COLOR = '#1a4971'
 COLOR_SCHEME_CSS = 'monokai.css'
@@ -59,3 +60,7 @@ from datetime import date
 CURRENT_YEAR = date.today().year
 
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+
+STATIC_PATHS = ['images', 'videos']
+
+MD_EXTENSIONS = ['headerid']
